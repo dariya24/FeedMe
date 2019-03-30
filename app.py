@@ -17,6 +17,10 @@ def result():
 def recipe():
     return render_template('swipe.html')
 
+@app.route('/recipe/<page_id>', methods=['POST', 'GET'])
+def recipes(page_id):
+    pageid = page_id
+    return render_template('recipe.html')
 
 if __name__ == '__main__':
    app.run(debug = True)

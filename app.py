@@ -18,5 +18,13 @@ def recipe():
     return render_template('swipe.html')
 
 
+@app.route('/rate', methods=['POST', 'GET'])
+def rate():
+    return render_template('rate.html')
+@app.route('/thanks', methods=['POST', 'GET'])
+def thanks():
+    print(request.form['rate'])
+    return 'Thank you very much!'
+
 if __name__ == '__main__':
    app.run(debug = True)

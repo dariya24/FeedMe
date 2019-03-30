@@ -75,25 +75,6 @@ body {
   /*padding-top: 4rem;*/
   border-radius: 10px 10px 0px 0px;
 }
-.demo__card__top.purple {
-  background: #7132b9;
-}
-.demo__card__top.blue {
-  background: #248cb6;
-}
-.demo__card__top.indigo {
-  background: #303f9f;
-
-}
-.demo__card__top.cyan {
-  background: #26c6da;
-}
-.demo__card__top.lime {
-  background: #afb42b;
-}
-.demo__card__top.brown {
-  background: #795548;
-}
 .demo__card__img {
   overflow: hidden;
   width: 100%;
@@ -105,7 +86,14 @@ margin: 0 auto 1.5rem;
   border-radius: 50%;
   border: 0.5rem solid #fff;
   background-image: url('//s3-us-west-2.amazonaws.com/s.cdpn.io/142996/profile/profile-512_5.jpg');*/
-  background-image: url('salmon.jpg');
+  
+  background-image: -webkit-linear-gradient(bottom, 
+      rgba(0,0,0,0.9) 0%, 
+      rgba(0,0,0,0.5) 20%,
+      rgba(0,0,0,0) 80%,
+      rgba(0,0,0,0) 100%
+    ),
+      url('./salmon.jpg');
   background-size: cover;
 }
 .demo__card__name {
@@ -163,10 +151,10 @@ margin: 0 auto 1.5rem;
   border-top-right-radius: 1.5rem;
 }
 .demo__card__choice.m--reject {
-  background: #ff945a;
+  background: #b10010;/*ff945a*/
 }
 .demo__card__choice.m--like {
-  background: #b1da96;
+  background: #7b9f01;/*b1da96*/
 }
 .demo__card__choice.m--like:after {
   transform: scaleY(-1);

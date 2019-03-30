@@ -2,21 +2,24 @@
 <html>
   <link rel="stylesheet" type="text/css" href="/static/swipe.css"/>
   <style type="text/css">
-  	::-webkit-scrollbar { 
-	    display: none; 
-	}
+  	.recipe__container{
+  		padding: 8px;
+  		display:inline-block;
+		width: 100%;
+  	}
   	.recipe__content{
   		overflow: hidden;
 		position: relative;
 		height: 48rem;
-		padding-top: 1rem;
+		padding: 1rem;
 		user-select: none;
-  		overflow-y: scroll	
+		scrollbar-width: none;
+  		overflow-y: scroll;
   	}
   	.recipe__img{
 	  overflow: hidden;
 	  width: 100%;
-	  height: 100%;
+	  height: 60em;
 	  border-radius:10px 10px 0px 0px;
 	  
 	  /*
@@ -34,6 +37,39 @@
 	      url('/static/salmon.jpg');
 	  background-size: cover;
   	}
+  	.recipe__desc{
+  		padding: 8px 0px 0px 0px;
+  		font-size: 20px;
+  	}
+  	.recipe__name {
+	  text-align: center;
+	  position: absolute;
+	  top: 17.5em;
+	  left: 24px;
+	  font-size: 2rem;
+	  font-weight: bold;
+	  color: #fff;
+	}
+	.recipe__heading{
+		font-weight: bold;
+		font-style: italic;
+		font-size: 3em;
+	}
+	.recipe__ingredient{
+		display:inline-block;
+		width: 100%;
+	}
+	.recipe__ingredient__value{
+		font-weight: bold;
+		font-size: 2.5em;
+		width: 30%; float:left;
+		text-align: right;
+	}
+    .recipe__ingredient__name{
+    	font-size: 2.5em;
+    	padding: 0px 0px 0px 8px;
+    	width: 70%; float:right;
+    }
   </style>
   <script type="text/javascript" src="/static/jquery3.3.1.min.js"></script>
   <script type="text/javascript" src="/static/swipe.js"></script>
@@ -41,11 +77,23 @@
   <div class="demo">
     <header class="demo__header"></header>
     <div class="recipe__content">
-    	<div class="recipe__img">
-    		
-    	</div>
-    	<div class="recipe__desc">
-    		Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    	<div class="recipe__img"></div>
+    	<div class="recipe__name">Awesome Meal</div>
+    	<div class="recipe__container">
+    		<div class="recipe__heading"> Ingredients </div>
+	    	<div class="recipe__ingredients">
+	    		<div class="recipe__ingredient">
+	    			<div class="recipe__ingredient__value"> 100g</div>
+	    			<div class="recipe__ingredient__name"> Meat</div>
+	    		</div>
+	    		<div class="recipe__ingredient">
+	    			<div class="recipe__ingredient__value"> 100g</div>
+	    			<div class="recipe__ingredient__name"> Meat</div>
+	    		</div>
+	    	</div>
+	    	<div class="recipe__desc">
+	    		Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+	    	</div>	
     	</div>
     </div>
   </div>

@@ -15,7 +15,7 @@ def result():
 
 @app.route('/recipe', methods=['POST', 'GET'])
 def recipe():
-    return render_template('recipe.html')
+    return render_template('swipe.html')
 
 
 if __name__ == '__main__':

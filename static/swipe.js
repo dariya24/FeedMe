@@ -24,6 +24,9 @@ $(document).ready(function() {
 
     if (pullDeltaX >= decisionVal) {
       $card.addClass("to-right");
+      //console.log(window.location.href);
+      id = 1;
+      window.location.href = window.location.href + "/" + id;
     } else if (pullDeltaX <= -decisionVal) {
       $card.addClass("to-left");
     }

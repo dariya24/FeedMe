@@ -1,0 +1,38 @@
+body {
+
+    background: url(img/back1.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+form {
+    margin: 0 auto;
+width:250px;
+
+}
+
+.demo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 30.6rem;
+  height: 54rem;
+  margin-left: -15.3rem;
+  margin-top: -27rem;
+  background: #f6f6f5;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+
+.demo__header {
+  height: 6rem;
+  background: #002942
+  }
+
+.demo__content {
+  overflow: hidden;
+  position: relative;
+  height: 48rem;
+  padding-top: 4.5rem;
+  user-select: none;
+}

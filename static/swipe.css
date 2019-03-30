@@ -23,20 +23,28 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 .demo__header {
-  height: 6rem;
+  height: 4rem;
   background: #002942;
 }
+.icon{
+  font-size: 4em;
+  color: #696969 ;
+  padding: 8px;
+}
+/*.header__logo{
+  background: url(/static/logo.png) no-repeat center center; height:50px; width:auto;
+}*/
 .demo__content {
   overflow: hidden;
   position: relative;
-  height: 48rem;
-  padding-top: 4.5rem;
+  height: 50rem;
+  padding-top: 3rem;
   user-select: none;
 }
 .demo__card-cont {
   position: relative;
   width: 24rem;
-  height: 32rem;
+  height: 43rem;
   margin: 0 auto 5rem;
 }
 .demo__card {
@@ -72,7 +80,7 @@ body {
 }
 .demo__card__top {
   position: relative;
-  height: 20.5rem;
+  height: 33rem;
   /*padding-top: 4rem;*/
   border-radius: 10px 10px 0px 0px;
 }
@@ -93,8 +101,13 @@ margin: 0 auto 1.5rem;
       rgba(0,0,0,0.5) 20%,
       rgba(0,0,0,0) 80%,
       rgba(0,0,0,0) 100%
+    ),-webkit-linear-gradient(left, 
+      rgba(0,0,0,0.9) 0%, 
+      rgba(0,0,0,0.5) 20%,
+      rgba(0,0,0,0) 80%,
+      rgba(0,0,0,0) 100%
     ),
-      url('./salmon.jpg');
+    url('./salmon.jpg');
   background-size: cover;
 }
 .demo__card__name {
@@ -108,14 +121,15 @@ margin: 0 auto 1.5rem;
 }
 .demo__card__btm {
   border-radius: 0px 0px 10px 10px;
-  
-  height: 11.5rem;
+  height: 10rem;
   background: #fff;
+  overflow: hidden;
 }
 .demo__card__we {
   text-align: center;
-  font-size: 2.2rem;
-  line-height: 11.5rem;
+  font-size: 1.3rem;
+  
+  padding: 0px 8px 8px 8px;
 }
 .demo__card__choice {
   border-radius: 10px 10px 10px 10px;

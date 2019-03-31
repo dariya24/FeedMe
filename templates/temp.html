@@ -2,7 +2,6 @@
 <html>
   <link rel="stylesheet" type="text/css" href="/static/swipe.css"/>
   <script type="text/javascript" src="/static/jquery3.3.1.min.js"></script>
-  <script type="text/javascript" src="/static/swipe.js"></script>
 
 
 <body>
@@ -10,7 +9,7 @@
     <header class="demo__header"></header>
     <div class="demo__content">
       <div class="demo__card-cont">
-        <div style="background: url('/static/img/back3.jpg'); background-size: cover;">
+        <div style="border-radius: 10px 10px 10px 10px; box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);">
             <p style="margin-top: 15%; font-size: 2rem; text-align: center;"> Welcome!<br> We really want to get to know you better! <br> </p>
             <p style="margin-top: 10%; font-size: 1.5rem; text-align: center;"> I am: </p>
 <form action = "http://localhost:5000/time" method = "POST" style="font-size: 2rem; margin-left: 25%; margin-top: 5%">
@@ -18,7 +17,8 @@
           <input type="radio" name="gender" value="work" > Athlete <br>
           <input type="radio" name="gender" value="work" > Working class <br>
           <input type="radio" name="gender" value="parent"> Parent <br>
-          <input type = "submit" value = "Find recipe" />
+          <a style="margin: 8px 8%;" onclick="window.location.href='{{ url_for( 'time' ) }}';" class="button">Finish</a>
+
 </form>
           </div>
        </div>

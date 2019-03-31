@@ -41,6 +41,17 @@
   background: #4CAF50;
   cursor: pointer;
 }
+.short-time{
+  float: left;
+  width: 25%;
+  font-size: 0.8em;
+}
+.long-time{
+  float: right;
+  width: 25%;
+  font-size: 0.8em;
+  text-align: right;
+}
 </style>
 
 
@@ -49,22 +60,17 @@
     <header class="demo__header"></header>
     <div class="demo__content">
       <div class="demo__card-cont">
-        <div style="border-radius: 10px 10px 10px 10px; box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3); padding: 1px 16px">
+        <div style="margin-top: 40%;border-radius: 10px 10px 10px 10px; box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3); padding: 1px 16px">
             <p style="margin-top: 15%; font-size: 2rem; text-align: center;"> How much time do you have? <br> </p>
             <p style="margin-top: 10%; font-size: 1.5rem; text-align: center;"> </p>
-
-
-
-
-
-
             <form action = "http://localhost:5000/recipe" method = "POST" style="font-size: 2rem;margin-top: 5%">
-
+                <div class="short-time">10min</div>
+                <div class="long-time">3h</div>
                 <div class="slidecontainer">
-  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-</div>
-          <input style="margin-left: 40%" type = "submit" value = "Let's cook!" />
-</form>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                </div>
+                <a style="margin: 8px 25%;" onclick="window.location.href='{{ url_for( 'recipe' ) }}';" class="button">Next</a>
+            </form>
           </div>
        </div>
         </div>

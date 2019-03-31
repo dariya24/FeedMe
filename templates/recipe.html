@@ -131,19 +131,7 @@
 	  box-shadow: inset 0 0 5px rgba(0,0,0,.9);
 	}
 
-	.button {
-	  background-color: #4CAF50;
-	  border: none;
-	  color: white;
-	  padding: 15px 32px;
-	  text-align: center;
-	  text-decoration: none;
-	  display: inline-block;
-	  font-size: 16px;
-	  margin: 8px 25%;
-	  cursor: pointer;
 
-	}
   </style>
   <script type="text/javascript" src="/static/jquery3.3.1.min.js"></script>
   <script type="text/javascript" src="/static/swipe.js"></script>
@@ -156,6 +144,7 @@
     	$(document).ready(function() {
     		console.log("test");
 		  	$.getJSON("/static/menu.json", function(json) {
+		  		console.log("test");
 		      	console.log(json); // this will show the info it in firebug console
 		      	//create elements
 		      	console.log(json.breakfast);
@@ -164,6 +153,18 @@
 		      	i = id
 		        max = Math.max(json.breakfast[i].nutrients.Carbs,json.breakfast[i].nutrients.Fat,json.breakfast[i].nutrients.Proteins);
 		        console.log(max);
+		        ingreds = ""
+		        for (var j = json.breakfast[i].ingredients.length - 1; j >= 0; j--) {
+		        	amount = json.breakfast[i].ingredients[j][0];
+		        	strTmp = json.breakfast[i].ingredients[j][1];
+		        	strTmp = strTmp.charAt(0).toUpperCase() + strTmp.slice(1);
+		        	tmp = `<div class="recipe__ingredient">
+		    			<div class="recipe__ingredient__value">` + amount + `</div>
+		    			<div class="recipe__ingredient__name">` + strTmp + `</div>
+		    		</div>`;
+		    		ingreds += tmp;
+		        }
+					
 		        elem = `<div class="recipe__content">
 		        			<div class="recipe__container">
 						    	<div class="recipe__img"  style='background: -webkit-linear-gradient(bottom, 
@@ -211,15 +212,7 @@
 					            &ensp; <i class='fas fa-clock icon'>`+ " "+String(json.breakfast[i].time)+"min" +`</i>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                     			<i class='fas fa-dollar-sign icon'>`+ " ~"+String(json.breakfast[i].price) +`</i>
 					    		<div class="recipe__heading"> Ingredients </div>
-						    	<div class="recipe__ingredients">
-						    		<div class="recipe__ingredient">
-						    			<div class="recipe__ingredient__value"> 100g</div>
-						    			<div class="recipe__ingredient__name"> Food</div>
-						    		</div>
-						    		<div class="recipe__ingredient">
-						    			<div class="recipe__ingredient__value"> 100g</div>
-						    			<div class="recipe__ingredient__name"> Food</div>
-						    		</div>
+						    	<div class="recipe__ingredients">`+ingreds+`
 						    	</div>
 						    	<div class="recipe__desc">` + json.breakfast[i].instructions +`
 						    		<br>
